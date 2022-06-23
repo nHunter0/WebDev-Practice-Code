@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dailyUpdate campus="Woolloomooloo" date="24/02/2016">
+    <staff operation="update">
+        <staffNumber>0154728</staffNumber>
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+    </staff>
+
+    <staff operation="add">
+        <staffNumber>5287523</staffNumber>
+        <firstName>Mary</firstName>
+        <lastName>Jane</lastName>
+    </staff>
+
+    <staff operation="update">
+        <staffNumber>231932</staffNumber>
+        <firstName>Joe</firstName>
+        <lastName>Mumma</lastName>
+    </staff>
+
+    <staff operation="add">
+        <staffNumber>436278</staffNumber>
+        <firstName>Clint</firstName>
+        <lastName>Man</lastName>
+    </staff>
+
+    <staff operation="add">
+        <staffNumber>643232</staffNumber>
+        <firstName>Mary</firstName>
+        <lastName>Jane</lastName>
+    </staff>
+
+    <staff operation="update">
+        <staffNumber>321432</staffNumber>
+        <firstName>Yoyo</firstName>
+        <lastName>Wasita</lastName>
+    </staff>
+</dailyUpdate>

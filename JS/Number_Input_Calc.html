@@ -1,0 +1,290 @@
+<html>
+    <head>
+        <title>Number Input Calculator</title>
+        <script>
+            function sumNumbers() {
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = Number(firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = Number(secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = Number(thirdNumberInput.value);
+
+                var fouthNumberInput = document.getElementById('fouthNumber');
+                var fouthNumber = Number(fouthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = Number(fifthNumberInput.value);
+
+                var result;
+                result = firstNumber + secondNumber + thirdNumber + fouthNumber + fifthNumber;
+                var sumSpan = document.getElementById('sumNumber');
+                sumSpan.innerHTML = result;
+            }
+
+            function productNumbers() {
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = Number(firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = Number(secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = Number(thirdNumberInput.value);
+
+                var fourthNumberInput = document.getElementById('fouthNumber');
+                var fourthNumber = Number(fourthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = Number(fifthNumberInput.value);
+
+                var result;
+                result = firstNumber * secondNumber * thirdNumber * fourthNumber * fifthNumber;
+                var sumSpan = document.getElementById('productNumber');
+                sumSpan.innerHTML = result;
+            }
+
+            function maxNumber() {
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = Number(firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = Number(secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = Number(thirdNumberInput.value);
+
+                var fourthNumberInput = document.getElementById('fouthNumber');
+                var fourthNumber = Number(fourthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = Number(fifthNumberInput.value);
+
+                var result;
+                result = Math.max(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
+                var sumSpan = document.getElementById('maxNumber');
+                sumSpan.innerHTML = result;
+            }
+
+            function minNumber() {
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = Number(firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = Number(secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = Number(thirdNumberInput.value);
+
+                var fourthNumberInput = document.getElementById('fouthNumber');
+                var fourthNumber = Number(fourthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = Number(fifthNumberInput.value);
+
+                var result;
+                result = Math.min(firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber);
+                var sumSpan = document.getElementById('minNumber');
+                sumSpan.innerHTML = result;
+            }
+
+            function oddEvenCount() {
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = Number(firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = Number(secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = Number(thirdNumberInput.value);
+
+                var fourthNumberInput = document.getElementById('fouthNumber');
+                var fourthNumber = Number(fourthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = Number(fifthNumberInput.value);
+
+                var oddCount = 0;
+                var evenCount = 0;
+
+                if (firstNumber % 2 === 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+
+                if (secondNumber % 2 === 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+
+                if (thirdNumber % 2 === 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+
+                if (fourthNumber % 2 === 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+
+                if (fifthNumber % 2 === 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+
+                var oddCountSpan = document.getElementById('oddNumber');
+                var evenCountSpan = document.getElementById('evenNumber');
+                oddCountSpan.innerHTML = oddCount;
+                evenCountSpan.innerHTML = evenCount;
+            }
+
+            function posativeNegativeCount() {
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = Number(firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = Number(secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = Number(thirdNumberInput.value);
+
+                var fourthNumberInput = document.getElementById('fouthNumber');
+                var fourthNumber = Number(fourthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = Number(fifthNumberInput.value);
+                var posativeCount = 0;
+                var negativeCount = 0;
+
+                if (firstNumber >= 0) {
+                    posativeCount++;
+                } else {
+                    negativeCount++;
+                }
+
+                if (secondNumber >= 0) {
+                    posativeCount++;
+                } else {
+                    negativeCount++;
+                }
+
+                if (thirdNumber >= 0) {
+                    posativeCount++;
+                } else {
+                    negativeCount++;
+                }
+
+                if (fourthNumber >= 0) {
+                    posativeCount++;
+                } else {
+                    negativeCount++;
+                }
+
+                if (fifthNumber >= 0) {
+                    posativeCount++;
+                } else {
+                    negativeCount++;
+                }
+
+                negativeSpan = document.getElementById('negativeNumber');
+                posativeSpan = document.getElementById('posativeNumber');
+                negativeSpan.innerHTML = negativeCount;
+                posativeSpan.innerHTML = posativeCount;
+            }
+
+            function zeroCount() {
+                //declaring our numbers as a string so that when no input is 
+                //entered zerocount will not be affected  
+                var firstNumberInput = document.getElementById('firstNumber');
+                var firstNumber = (firstNumberInput.value);
+
+                var secondNumberInput = document.getElementById('secondNumber');
+                var secondNumber = (secondNumberInput.value);
+
+                var thirdNumberInput = document.getElementById('thirdNumber');
+                var thirdNumber = (thirdNumberInput.value);
+
+                var fourthNumberInput = document.getElementById('fouthNumber');
+                var fourthNumber = (fourthNumberInput.value);
+
+                var fifthNumberInput = document.getElementById('fifthNumber');
+                var fifthNumber = (fifthNumberInput.value);
+
+                var zeroCount = 0;
+                if (firstNumber === "0") {
+                    ++zeroCount;
+                }
+                if (secondNumber === "0") {
+                    ++zeroCount;
+                }
+                if (thirdNumber === "0") {
+                    ++zeroCount;
+                }
+                if (fourthNumber === "0") {
+                    ++zeroCount;
+                }
+                if (fifthNumber === "0") {
+                    ++zeroCount;
+                }
+                zeroSpan = document.getElementById('zeroNumber');
+                zeroSpan.innerHTML = zeroCount;
+            }
+        </script>
+    </head>
+    <body>
+        Enter 1st integer:
+        <br />
+        <input type ="text" size="5" id='firstNumber' />
+        <br/>
+        Enter 2nd integer:
+        <br />
+        <input type ="text" size="5" id='secondNumber' />
+        <br/>
+        Enter 3rd integer:
+        <br />
+        <input type ="text" size="5" id='thirdNumber' />
+        <br/>
+        Enter 4th integer:
+        <br />
+        <input type ="text" size="5" id='fouthNumber' />
+        <br/>
+        Enter 5th integer:
+        <br />
+        <input type ="text" size="5" id='fifthNumber' />
+        <br /><br />
+        1.The sum of 5 integers; <span id="sumNumber"></span>
+        <br />
+        2.The product of 5 integers; <span id="productNumber"> </span>
+        <br />
+        3.The maximum of 5 integers; <span id="maxNumber"> </span>
+        <br />
+        4.The minimum of 5 integers;  <span id="minNumber"> </span>
+        <br />
+        5.How many odd integers;  <span id="oddNumber"> </span>
+        <br />
+        6.How many even integers; <span id="evenNumber"> </span>
+        <br />
+        7.How many positive integers; <span id="posativeNumber"> </span>
+        <br />
+        8.How many negative integers;  <span id="negativeNumber"> </span>
+        <br />
+        9.How many zero.  <span id="zeroNumber"> </span>
+        <br/>
+        <button onClick ="sumNumbers();
+                productNumbers();
+                maxNumber();
+                minNumber();
+                oddEvenCount();
+                posativeNegativeCount();
+                zeroCount(100);"> 
+            calculate 
+        </button>
+    </body>
+</html>

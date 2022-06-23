@@ -1,0 +1,160 @@
+<html> 
+    <head>
+        <title>Internal CSS Exercise</title>
+
+        <style>
+            #competitionPara{  
+                font-size: 50px;
+                background-color: #ff000010;
+                padding: 30px;
+                text-align:center;
+                border-style: dotted;
+                border-color: red;
+                border-width: 5px;
+            }
+
+            #headerRow{
+                font-size: 40px;
+                color: navy;
+                background-color: #00000010;
+            }
+
+            .rankingNumber{
+                font-size: 60px;
+                color:maroon;
+            }
+            
+            #word1{
+                color: orange;
+            }
+            
+            #word2{
+                color: pink;
+            }
+            
+            #word3{
+                color:blue;
+            }
+            
+            .memberList{
+                color:green;
+            }
+            
+            .leader{
+                color:purple;
+            }
+            
+            .evenRow{
+                background-color: #55ff7720;
+            }
+            
+            .oddRow{
+                background-color: #cc007711;
+            }
+            
+            #teamTable th{
+                padding:20px;
+                border-style: dashed;
+                border-color: black;
+                border-width: 5px;
+            }
+            
+            #teamTable td{
+                padding:20px;
+                border-style: solid;
+                border-color: gray;
+                border-width: 1px;
+
+            }
+            
+            .memberList > li{
+                padding:10px;
+            }
+            
+            .rankColumn{
+                text-align: right;
+                vertical-align: top;
+            }
+            
+            .teamColumn{
+                text-align: center;
+                vertical-align: top;
+            }
+            
+            .memberColumn{
+                text-align: left;
+                vertical-align: top;
+            }
+            
+            #teamtable{
+                border-style: none;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id= "competitionPara">
+            <span id="word1">
+                World 
+            </span>
+            <span id ="word2">
+                Gurning
+            </span>
+            <span id="word3">
+                Competition
+            </span>
+            &#128522; 
+        </p>
+        <table id="teamTable">
+            <tr id="headerRow">
+                <th class="rankColumn"> 
+                    Ranking 
+                </th>
+                <th class="teamColumn">
+                    Team 
+                </th>
+                <th class="memberColumn">
+                    Member 
+                </th>
+            </tr>
+            <tr class ="oddRow">
+                <td class ="rankingNumber rankColumn">
+                    1st
+                </td>
+                <td class="teamColumn">
+                    <a href="http://didd.gov"> Kingdom of Didd</a>
+                    <br />
+                    <image src="../images/dogImage.jpg" height="100px" width="150px" />
+                </td>
+                <td class="memberColumn">
+                    <ul class="memberList">
+                        <li class="leader"><b>Thing 1</b><i>(team leader)</i></li>
+                        <li>North-Going Zax</li>
+                        <li>Cindy-Lou Who</li>
+                        <li>McMonkey McBean</li>
+                        <li>Vlad Vlad-i-Koff</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="evenRow">
+                <td class ="rankingNumber rankColumn"> 
+                    2nd
+                </td>
+                <td class="teamColumn">
+                    <a href="http://binn.gov">Kingdom of Binn </a>
+                    <br />
+                    <img src="../images/catImage.jpg" height="100px" width="100px" />
+                </td>
+                <td class="memberColumn">
+                    <ul class="memberList">
+                        <li class="leader"><b>Thing 2</b><i>(team leader)</i></li>
+                        <li>South-Going Zax</li>
+                        <li>The Grinch</li>
+                        <li>Bartholomew Cubbins</li>
+                        <li>Fizz-ma Wizza-ma Dill</li>
+                    </ul>
+                </td>
+        </table>	
+    </body>
+</html>

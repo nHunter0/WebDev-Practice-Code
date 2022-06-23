@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<audit campus="Woolloomooloo" year="2000" session="A">
+    <subject sid="0769642">
+        <code>MATH101</code>
+        <title>Calculus</title>
+        <statistics>
+            <enrol>170</enrol>
+            <withdrawn>31</withdrawn>
+        </statistics>
+    </subject>
+    <subject sid="1734231">
+        <code>MATH234</code>
+        <title>Abstract Algebra</title>
+        <statistics>
+            <enrol>40</enrol>
+            <withdrawn>15</withdrawn>
+        </statistics>
+    </subject>
+</audit>

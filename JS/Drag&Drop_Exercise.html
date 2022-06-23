@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Drag&Drop Exercise</title>
+</head>
+<style>
+    .animalText {
+        font-size: 40px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+
+    }
+</style>
+<script>
+
+    function dragStart(event) {
+        var dragId = event.target.id;
+        console.log(dragId);
+
+        //store
+        event.dataTransfer.setData("dragId", dragId);
+    }
+
+    var dogCounter = 0;
+    var catCounter = 0;
+    function drop(event){
+        //get drop element id
+        var dropId = event.target.id;
+        console.log("dropID " + dropId);
+
+        //get drag Id
+        var dragId = event.dataTransfer.getData("dragId");
+        console.log("dragId " + dragId );
+
+
+        //Logic
+        var dogSpan = document.getElementById("dogCountHolder");
+        var catSpan = document.getElementById("catCountHolder");
+
+        if( (dropId == "dogText" ) && (dragId =="dogImage") ){
+            dogCounter += +1;
+            dogSpan.innerHTML = dogCounter
+        }
+        else if( (dropId == "catText" ) && (dragId =="catImage") ){
+            catCounter += +1;
+            catSpan.innerHTML = catCounter;
+        }
+    }
+
+    function dragOver(event){
+        event.preventDefault();
+    }
+
+</script>
+<boby>
+    Drag an animal and drop on corresponding text.
+    <br /><br />
+
+    <span class="animalText">
+        <span id="dogText"
+        onDrop="drop(event)"
+        onDragOver="dragOver(event)">
+            Dog
+        </span>
+        <span id="dogCountHolder">
+            0
+        </span>
+        
+    </span>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <span class="animalText">
+        <span id="catText"
+            onDrop="drop(event)"
+            onDragOver="dragOver(event)">
+            Cat
+        </span>
+        <span id="catCountHolder">
+            0
+        </span>
+    </span>
+
+    <br /><br />
+
+    <img src="../images/catImage.jpg" height="100px" draggable="true" onDragStart="dragStart(event)" id="catImage" />
+
+    <img src="../images/dogImage.jpg" height="100px" draggable="true" onDragStart="dragStart(event)" id="dogImage" />
+</boby>
+
+</html>

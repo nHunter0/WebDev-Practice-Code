@@ -1,0 +1,54 @@
+<html>
+<title>Translate to JSON</title>
+
+<head>
+    <script>
+        function showJSON() {
+            var subjectCode = document.getElementById("subCode").value;
+            var subTitle = document.getElementById("subTitle").value;
+            var subCred = document.getElementById("subCred").value;
+            var coreF = document.getElementById("core");
+            var coreFlag = coreF.checked;
+
+            var subjectObject = {};
+            subjectObject.code = subjectCode;
+            subjectObject.title = subTitle;
+            subjectObject.credit = subCred;
+            subjectObject.core = coreFlag;
+
+            //Translating obj to JSON
+            var subjectJSON = JSON.stringify(subjectObject, null, 2);
+
+            var display = document.getElementById("display").value = subjectJSON;
+        }
+    </script>
+
+</head>
+
+<body>
+    Subject code:
+    <input type="text" id="subCode" />
+    <br />
+
+    Subject title:
+    <input type="text" id="subTitle" />
+    <br />
+
+    Subject credit point:
+    <input type="text" id="subCred" />
+    <br />
+
+    Core subject:
+    <input type="checkbox" id="core" />
+    <br />
+    <br />
+
+    <button onClick="showJSON()">
+        View JSON
+    </button>
+    <br />
+
+    <textarea rows="7" cols="50" id="display"></textarea>
+</body>
+
+</html>

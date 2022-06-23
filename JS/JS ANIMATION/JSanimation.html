@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>JavaScript Animation Exercise</title>
+    <script>
+        var animationOn = false;
+        var counter = 0;
+        var resultCounter = 0;
+        var lResult = "1111";
+        var studentNum = 1111;
+        var counter2 = 0.5;
+
+        function displayEquation() {
+            var resultSpan = document.getElementById("resultHolder");
+            counter = counter + 1;
+            counter2 = counter2 + 0.5;
+            var result = (counter * counter2) + 1111;
+            lResult = lResult + "+" + counter;
+            resultSpan.innerHTML = lResult + " = " + result;
+        }
+
+        function startAnimation() {
+            if (animationOn == false) {
+                animationOn = true;
+                numberAnimation = setInterval(displayEquation, 1000);
+            }
+        }
+
+        function stopAnimation() {
+            if (animationOn == true) {
+                animationOn = false;
+                clearInterval(numberAnimation);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <button onClick=startAnimation()>Start Animation</button>
+    <button onClick=stopAnimation()>Stop Animation</button>
+    <br />
+    <span id="resultHolder"></span>
+</body>
+
+</html>

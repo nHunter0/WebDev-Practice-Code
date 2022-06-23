@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Canvas Drawing Exercise</title>
+        <script>
+            function draw(){
+            var X1 = Number((document.getElementById("X1")).value);
+            var Y1 = Number((document.getElementById("Y1")).value);
+            var X2 = Number((document.getElementById("X2")).value);
+            var Y2 = Number((document.getElementById("Y2")).value);
+            var X3 = Number((document.getElementById("X3")).value);
+            var Y3 = Number((document.getElementById("Y3")).value);
+
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+
+            context.beginPath();
+            context.lineTo(X1,Y1);
+            context.lineTo(X2,Y2);
+            context.lineTo(X3,Y3);
+            context.closePath();
+
+            //making Stroke
+            context.strokeStyle="purple";
+            context.lineWidth-"4";
+            context.stroke();
+
+            context.fillStyle="#DDA0DD"
+            context.fill();
+
+            // Drawing median lines
+            // straight line from a vertex
+            //to the midpoint of the opposite side
+            context.strokeStyle = "white";
+            context.lineWidth = "2";
+
+            context.beginPath();
+            context.moveTo(X1,Y1);
+            context.lineTo( (X2 + X3)/2, (Y2 + Y3)/2 );
+            context.stroke();
+            
+            context.beginPath();
+            context.moveTo(X2,Y2);
+            context.lineTo( (X1 + X3)/2, (Y1 + Y3)/2 );
+            context.stroke();
+
+            context.beginPath();
+            context.moveTo(X3,Y3);
+            context.lineTo( (X1 + X2)/2, (Y1 + Y2)/2 );
+            context.stroke();
+
+            //Drawing Vertacies
+            context.fillStyle = "black";
+            context.font ="bold 20px Arial";
+            context.fillText("A", X1, Y1);
+            context.fillText("B", X2, Y2);
+            context.fillText("C", X3, Y3);
+        }
+        </script>
+    </head>
+
+    <body>
+        <button onClick="draw()">Draw</button>
+        <br />
+        Enter coordinate for 1st point:  X= <input id="X1" type="text" size = "5"/> Y=  <input id="Y1" type="text" size = "5"/> <br/>
+        Enter coordinate for 2nd point:X= <input id="X2" type="text" size = "5"/> Y=  <input id="Y2" type="text" size = "5"/> <br/>
+        Enter coordinate for 3rd point:  X= <input id="X3" type="text" size = "5"/> Y=  <input id="Y3" type="text" size = "5"/> <br/>
+        <br/>
+        <canvas id = "mycanvas" style="height: 150; width:300; border: 3px dotted black" >
+            Browser does not support canvas
+        </canvas>
+        
+    </body>
+
+</html>

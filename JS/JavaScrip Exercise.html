@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>JavaScrip Exercise</title>
+        <script>
+            //QUESTION 1
+            function showSelection(){
+                var inputField1 = document.getElementById("input1");
+                var subject1 = inputField1.value;
+
+                var inputField2 = document.getElementById("input2");
+                var subject2 = inputField2.value;
+
+                var inputField3 = document.getElementById("input3");
+                var subject3 = inputField3.value;
+
+                var inputField4 = document.getElementById("input4");
+                var subject4 = inputField4.value;
+
+                var subjectSpan = document.getElementById("subjectDisplay");
+                subjectSpan.innerHTML = "You have selected " + 
+                                    subject1 + ", " +
+                                    subject2 + ", " +
+                                    subject3 + ", " +
+                                    subject4;
+            }   
+            //Question 2
+            function checkAnswer(){
+                //getting first Number
+                var inputFeildOne = document.getElementById("inputOne");
+                var numberOne = Number(inputFeildOne.value);
+                
+                //getting second Number
+                var inputFeildTwo = document.getElementById("inputTwo");
+                var numberTwo = Number(inputFeildTwo.value);
+                
+                //getting operation
+                var operationSelect = document.getElementById("operationSelect");
+                var operation = operationSelect.value;
+
+                //calculate correct answer
+                var correctAnswer;
+                
+                if(operation == "add"){
+                    correctAnswer = numberOne + numberTwo;
+                }
+                
+                else if(operation == "subtract"){
+                    correctAnswer = numberOne - numberTwo;
+                }
+                
+                else if(operation == "multiply"){
+                    correctAnswer = numberOne * numberTwo;
+                }
+                
+                //get user answer
+                var inputFeildThree = document.getElementById("inputThree");
+                var userAnswer = Number(inputFeildThree.value);
+                
+                //check users answer (and display whether correct/inccorct)
+                var checkMessageSpan = document.getElementById("checkMessage");
+                if(userAnswer == correctAnswer) {
+                    checkMessageSpan.innerHTML = "Correct"
+                }
+                else {
+                   checkMessageSpan.innerHTML = "Incorrect, please try again.";
+                }
+            }
+            
+            //Question 3
+            var counter = 0;
+            var animationOn = false;
+            var counterAnimation;
+            
+            function updatedCounter() {
+               counter = counter + 1; 
+               var counterSpan = document.getElementById("counterHolder");
+               counterSpan.innerHTML = counter;
+            }
+            
+            
+            //Question 4
+            function startCounterAnimation(){
+                if(animationOn == false){
+                    animationOn = true;
+                    counterAnimation = setInterval(updatedCounter, 1000);
+                }
+            }
+            
+            function stopCounterAnimation(){
+                if(animationOn == true){
+                    animationOn = false;
+                    clearInterval(counterAnimation);
+                }
+                
+            }
+        </script>
+        
+        
+    </head>
+    
+    <body>
+        <h1>Question 1</h1>
+        <!-- QUESTION 1 -->
+        Please select 4 subjects
+        <br/><br/>
+        
+        Subject 1:
+        <input id="input1" type='text' size='10' />
+        <br/>
+        
+        Subject 2:
+        <input id="input2" type='text' size='10' />
+        <br/>
+        
+        Subject 3:
+        <input id="input3" type='text' size='10' />
+        <br/>
+        
+        Subject 4:
+        <input id="input4" type='text' size='10' />
+        <br/>
+        
+        <button onClick='showSelection();'>
+            Show selection
+        </button>
+        <br/><br/>
+        <span id="subjectDisplay"> </span>
+        
+        <br/><br/><br/>
+        
+        <!-- QUESTION2 -->
+        <h1>QUESTION 2</h1>
+        <input id='inputOne' type="text" size="5" />
+        
+        <select id='operationSelect'>
+            <option value ="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+        </select>
+        <input id='inputTwo' type="text" size="5" />
+        =
+        <input id='inputThree' type="text" size="5" />
+        
+        <button onClick="checkAnswer();">Check</button>
+        <br/>
+        <span id ='checkMessage'> </span>
+        
+        <br/><br/><br/>
+        
+        <!-- QUESTION 3 -->
+        <h1>Question 3 / 4</h1>
+        <button onClick ='updatedCounter();'>Increase Counter</button>
+        
+        <!-- QUESTION 4 -->
+        <button onClick='startCounterAnimation();'>
+            Start counter animation
+        </button>
+        <button onClick="stopCounterAnimation();">
+            Stop counter animation
+        </button>
+        <br /><br />
+        <span id = "counterHolder">0</span>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>TimesTable.html With FROGS ?? </title>
+    <script>
+
+        function displayTimeTable() {
+            var display = document.getElementById("spanHolder");
+            var inputField = document.getElementById("userInput");
+            var userInput = Number(inputField.value);
+
+            result = userInput + " x &#128056; = " + (userInput * 1) + "<br />" +
+                userInput + " x &#128056;&#128056; = " + (userInput * 2) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056; = " + (userInput * 3) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056; = " + (userInput * 4) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056;&#128056; = " + (userInput * 5) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056;&#128056;&#128056; = " + (userInput * 6) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056; = " + (userInput * 7) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056; = " + (userInput * 8) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056; = " + (userInput * 9) + "<br />" +
+                userInput + " x &#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056;&#128056; = " + (userInput * 10) + "<br />";
+
+            display.innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+    <input id="userInput" type="text" size="5" />
+    <br />
+    <button onClick=displayTimeTable()>Generate FROG-Timestable</button>
+    <br /><br />
+    <span id="spanHolder"></span>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>WebForm-Exercise 2</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1>Whosville libary book search</h1>
+        <form action="http://library.whosville/bsearch" method="get">
+
+            <table border="0">
+                <tr>
+                    <td>
+                        Author name: 
+                    </td>
+                    <td>
+                        <input type="text" size ="30" name="author"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Publication year:
+                    </td>
+                    <td>
+                        <input type="text" size ="30" name="year"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Subject: 
+                    </td>
+                    <td>
+                        <input type ="checkbox" name="sub" value="mth" /> Mathematics
+                        <br/>
+                        <input type ="checkbox" name="sub" value="cs" /> Computer Science 
+                        <br/>
+                        <input type ="checkbox" name="sub" value="bio" /> Biology
+                        <br/>
+                        <input type ="checkbox" name="sub" value="phys" /> Physics
+                        <br/>
+                        <input type ="checkbox" name="sub" value="chem" /> Chemistry
+                        <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value ="Search" />
+                        <input type="reset" value="Clear" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br /><br /><br /><br />
+
+        <!-- PART2 -->
+        <h1>Ebay search</h1>
+        
+        <form action="https://www.ebay.com.au/sch/i.html" method="get">
+            Keyword: <input type="text" name="_nkw" />
+            <br/>
+            <input type="radio" name ="_sacat" value ="550"/> Art
+            <br/>
+            <input type="radio" name ="_sacat" value ="267"/>Book & Magazine
+            <br/>
+            <input type="radio" name ="_sacat" value ="11116"/> Coins
+            <br/>
+            <input type="radio" name ="_sacat" value ="11233"/> Music
+            <br/>
+            <input type="radio" name ="_sacat" value ="260"/> Stamp
+            <br/>
+            <input type="radio" name ="_sacat" value ="0"/> All categories
+            <br/>
+            
+            <input type="submit" value="Search" />
+            
+            
+        </form>
+        
+    </body>
+</html>

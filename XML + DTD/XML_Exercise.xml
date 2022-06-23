@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!--XML decleration needs to be on first line-->
+<studentList>    <!-- Needed root tag -->
+    <student sn="3719301">
+        <firstName>John</firstName>        <!-- needed " " -->
+        <lastName>Smith</lastName>
+        <email>jsmith@gmail.com</email>
+    </student>
+    <student sn="6382520">        <!-- needed " " -->
+        <firstName>Mary</firstName>
+        <lastName>Jane</lastName>
+        <email>mjane@gmail.com</email>
+    </student>
+</studentList> 

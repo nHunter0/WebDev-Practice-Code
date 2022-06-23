@@ -1,0 +1,15 @@
+{
+    "firstName": "John",
+    "lastName": "Smith",
+    "subjectList" : [
+        {
+        "code": "MATH101",
+        "title":"Algebra"
+        },
+        {
+        "code":"CSIT122",
+        "title":"C programming"
+        }
+    ],
+    "age": 23
+   }

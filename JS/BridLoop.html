@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Looping Birds</title>
+        <script>
+            var userClick = 0;
+            var birdImages = ["../images/redBirdImage.png", "../images/greenBirdImage.png", "../images/blueBirdImage.png", "../images/yellowBirdImage.png"];
+
+            function changeImage() {
+                if (userClick === 3) {
+                    userClick = 0;
+                } else
+                    userClick++;
+                var image = document.getElementById('redBirdImage');
+                image.src = birdImages[userClick];
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Click on bird to change bird color (: </h1>
+   
+        <img id="redBirdImage" src="../images/redBirdImage.png" onclick="changeImage();" />
+    </body>
+</html>

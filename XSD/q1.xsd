@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="result">   
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="contestantId" type="xsd:string"/> <!-- NOTE* that "string" cannot be "String" -->
+                <xsd:element name="examId" type="xsd:string"/>
+                <xsd:element name="score" type="xsd:integer"/>
+                <xsd:element name="band" type="xsd:string"/>
+                <xsd:element name="digitalSignature" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="ref" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

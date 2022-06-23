@@ -1,0 +1,26 @@
+{
+    "patronFirstname": "JHON",
+    "patronLastName": "SMITH",
+    "iteamsCheckedOut": [
+        {
+            "title / author": "Network security / K. Wrightson",
+            "callNumber": "212.37/56",
+            "due": "26-07-2016"
+        },
+        {
+            "title / author": "Analysis / T. Tao",
+            "callNumber": "515/465",
+            "due": "23-12-2016"
+        },
+        {
+            "title / author": "The art of computer programming / D.E. Knuth",
+            "callNumber": "005.1/300",
+            "due": "25-11-2016 overdue"
+        },
+        {
+            "title / author": "Python for dummies / S. Maruch and M. Renum",
+            "callNumber": "145.3/57",
+            "due": "01-10-2016 overdue"
+        }
+    ]
+}

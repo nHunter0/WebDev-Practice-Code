@@ -1,0 +1,61 @@
+{
+    "searchQuery": "Australia",
+    "searchResult": [
+        {
+            "airportName": "Sydney Airport",
+            "ICAO": "YSSY",
+            "IATA": "SYD",
+            "city": "Sydney",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Canberra Airport",
+            "ICAO": "YSCB",
+            "IATA": "CBR",
+            "city": "Canberra",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Brisbane Airport",
+            "ICAO": "YBBN",
+            "IATA": "BNE",
+            "city": "Brisbane",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Adelaide Airport",
+            "ICAO": "YPAD",
+            "IATA": "ADL",
+            "city": "Adelaide",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Hobart International Airport",
+            "ICAO": "YMHB",
+            "IATA": "HBA",
+            "city": "Hobart",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Melbourne Airport",
+            "ICAO": "YMML",
+            "IATA": "MEL",
+            "city": "Melbourne",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Perth Airport",
+            "ICAO": "YPPH",
+            "IATA": "PER",
+            "city": "Perth",
+            "country": "Australia"
+        },
+        {
+            "airportName": "Darwin International Airport",
+            "ICAO": "YPDN",
+            "IATA": "DRW",
+            "city": "Darwin",
+            "country": "Australia"
+        }
+    ]
+}

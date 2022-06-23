@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE studentRecord [
+<!--
+    Data is based off table2.jpg
+    
+    DTD is sensative cannot have: studentRecord(studentNumber ect...)
+    have to have a space like: studentRecord (studentNumber ect...)
+-->
+    <!ELEMENT studentRecord (studentNumber, firstName, lastName, result)>
+    <!ELEMENT studentNumber (#PCDATA) >
+    <!ELEMENT firstName (#PCDATA)>
+    <!ELEMENT lastName (#PCDATA)>
+    <!ELEMENT result (subject*)> <!-- * = 0 or more subjects -->
+    <!ELEMENT subject (code, cp, mark, grade)>
+    <!ELEMENT code (#PCDATA)>
+    <!ELEMENT cp (#PCDATA)>
+    <!ELEMENT mark (#PCDATA)>
+    <!ELEMENT grade (#PCDATA)>
+]>
+
+<studentRecord> 
+    <studentNumber>1231234</studentNumber>
+    <firstName>John</firstName>
+    <lastName>Smith</lastName>
+    <result>
+        <subject>
+            <code>MATH101</code>
+            <cp>4</cp>
+            <mark>85</mark>
+            <grade>A</grade>
+        </subject>
+
+        <subject>
+            <code>EOCN111</code>
+            <cp>5</cp>
+            <mark>70</mark>
+            <grade>B</grade>
+        </subject>
+
+        <subject>
+            <code>CS100</code>
+            <cp>5</cp>
+            <mark>80</mark>
+            <grade>A</grade>
+        </subject>
+
+        <subject>
+            <code>LAW121</code>
+            <cp>6</cp>
+            <mark>75</mark>
+            <grade>B</grade>
+        </subject>
+    </result>
+</studentRecord>

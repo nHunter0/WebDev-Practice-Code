@@ -1,0 +1,356 @@
+<html>
+    <head>
+        <title>Table with CSS</title>
+
+        <style>
+            #foodTable{
+                padding: 25px;
+                background-color: whitesmoke;
+                border-collapse: separate;
+                border-style: double;
+                border-color: red;
+                border-width: 10px;
+                border-spacing: 0px;
+            }
+
+            #foodTable td{
+                height: 100px;
+                width: 200px;
+                padding: 25px;
+                border-style: solid;
+                border-color: black;
+                border-width: 1px;
+            }
+
+            #foodTable th{
+                padding: 25px;
+                font-size: 30px;
+                border-style: solid;
+                border-color: black;
+                border-width: 1px;
+                text-align: center;
+                vertical-align: top;
+            }
+
+            #headerRow{
+                font-size: 50px;
+                font-family: monospace;
+                background-color: lightgray;
+                color: blue;
+            }
+
+            .foodNameColumn{
+                font-family: sans-serif;
+                font-size: 30px;
+                text-align: center;
+                vertical-align: center;
+            }
+			
+            .vitaminsColumn{
+                font-family: sans-serif;
+                font-size: 20px;
+                text-align: left;
+                vertical-align: top;
+            }
+			
+            .reasonColumn{
+                font-family: sans-serif;
+                font-size: 20px;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            .vitaminList > li{
+                padding:10px; 
+                list-style-type: square; 
+                border-width: 5px;
+            }
+
+            #refList{
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table id="foodTable">
+            <!-- Header Row -->
+            <tr id="headerRow">    
+                <th class="foodNameColumn">
+                    Food Name
+                </th>
+                <th class="vitaminsColumn">
+                    Vitamins
+                </th>
+                <th class="reasonColumn">
+                    Why this food is healthy
+                </th>
+            </tr>
+
+            <!-- Row 1 -->  
+            <tr>
+                <td class="foodNameColumn">
+                    Beans
+                </td>
+
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin B1</li>
+                        <li>Vitamin B6</li>
+                        <li>Vitamin K</li>
+                        <li>Vitamin B</li>
+                        <li>Vitamin E</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Beans are both a nutritious and tasteful treat that work well 
+                    with most any meal. Beans are a great source of fiber and helps 
+                    regulate and protect your heart against high cholesterol.  
+                </td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Carrot
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin A</li>
+                        <li>Vitamin K</li>
+                        <li>Vitamin C</li>
+                    </ul>
+                </td>
+                <td class="reasonColumn">
+                    The fiber in carrots can help keep blood sugar levels under 
+                    control. And they're loaded with vitamin A and beta-carotene, 
+                    which there's evidence to suggest can lower your diabetes risk.
+                    Carrots can also strengthen your bones.
+                </td>
+
+                <!-- Row 3 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Orange
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin C</li>
+                        <li>Vitamin A</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Every type of orange has more than 100% of your recommended 
+                    daily amount of vitamin C. That's more than any other citrus 
+                    fruit. All you have to do to get this key vitamin is peel and 
+                    eat.
+                </td>
+            </tr>
+
+            <!-- Row 4 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Egg
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin A</li>
+                        <li>Vitamin B6</li>
+                        <li>Vitamin B12</li>
+                        <li>Vitamin D</li>
+                        <li>Vitamin E</li>
+                        <li>Vitamin K</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Eggs are a very good source of inexpensive, high-quality 
+                    protein. More than half the protein of an egg is found in the 
+                    egg white, which also includes vitamin B2 and lower amounts of
+                    fat than the yolk.
+                </td>
+            </tr>
+
+            <!-- Row 5 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Avocado
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin K</li>
+                        <li>Vitamin C</li>
+                        <li>Vitamin B5</li>
+                        <li>Vitamin B6</li>
+                        <li>Vitamin E</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    This fruit is prized for its high nutrient value and is added to
+                    various dishes due to its good flavor and rich texture. 
+                    Avocados are very nutritious and contain a wide variety of 
+                    nutrients, including 20 different vitamins and minerals.
+                </td>
+            </tr>
+
+            <!-- Row 6 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Milk
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin A</li>
+                        <li>Vitamin B12</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Milk is an excellent source of vitamins and minerals, 
+                    particularly calcium. It has an important role in bone health. 
+                    Nutritionists recommend that people have milk every day as part
+                    of a balanced diet.
+                </td>
+            </tr>
+
+            <!-- Row 7 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Fish
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin A</li>
+                        <li>Vitamin B1</li>
+                        <li>Vitamin B2</li>
+                        <li>Vitamin B3</li>
+                        <li>Vitamin B5</li>
+                        <li>Vitamin B6</li>
+                        <li>Vitamin B12</li>
+                        <li>Vitamin D</li>
+                        <li>Vitamin E</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Eating fish is an important source of omega-3 fatty acids. These
+                    essential nutrients keep our heart and brain healthy.
+                    Fish is a low-fat high quality protein. Fish is filled with 
+                    vitamins and minerals such as D and B2.
+                </td>
+            </tr>
+
+            <!-- Row 8 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Pork
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin A</li>
+                        <li>Vitamin B9</li>
+                        <li>Vitamin C</li>
+                        <li>Vitamin E</li>
+                        <li>Vitamin K</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Pork is a rich source of certain vitamins and minerals your body
+                    needs to function, like iron and zinc. It's also an excellent 
+                    source of high-quality protein. Minimally processed, lean, 
+                    fully-cooked pork eaten in moderation can provide certain 
+                    benefits when added to your diet.
+                </td>
+            </tr>
+
+            <!-- Row 9 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Broccoli
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin A</li>
+                        <li>Vitamin B9</li>
+                        <li>Vitamin C</li>
+                        <li>Vitamin E</li>
+                        <li>Vitamin K</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Broccoli is a good source of fibre and protein, and contains 
+                    iron, potassium, calcium, selenium and magnesium as well as the 
+                    vitamins A, C, E, K and a good array of B vitamins including 
+                    folic acid.
+                </td>
+            </tr>
+
+            <!-- Row 10 -->
+            <tr>
+                <td class="foodNameColumn">
+                    Seeds
+                </td>
+                <td class="vitaminsColumn">
+                    <ul class= "vitaminList">
+                        <li>Vitamin B1</li>
+                        <li>Vitamin B2</li>
+                        <li>Vitamin B3</li>
+                        <li>Vitamin B5</li>
+                        <li>Vitamin B6</li>
+                    </ul>
+                </td>
+
+                <td class="reasonColumn">
+                    Seeds are great sources of fiber. They also contain healthy 
+                    monounsaturated fats, polyunsaturated fats and many important 
+                    vitamins, minerals and antioxidants. When consumed as part of a 
+                    healthy diet, seeds can help reduce blood sugar, cholesterol and
+                    blood pressure.
+                </td>
+            </tr>
+        </table>
+
+        <pre id="refList"><!-- Reference List (preserved) -->
+            Reference List -
+
+6 Super Healthy Seeds You Should Eat [WWW Document], 2017. . Healthline. URL
+    https://www.healthline.com/nutrition/6-healthiest-seeds (accessed 8.13.21).
+
+Bonvissuto, D., n.d. Health Benefits of Oranges [WWW Document]. WebMD. URL
+     https://www.webmd.com/food-recipes/health-benefits-oranges (accessed 8.11.21).
+
+Green Beans Nutrition: Health Information [WWW Document], 2016. . Healthline. 
+    URL https://www.healthline.com/health/food-nutrition/green-beans (accessed 8.14.21).
+
+Gurnnars, K., 2018. 12 Proven Health Benefits of Avocado [WWW Document]. Healthline. URL
+     https://www.healthline.com/nutrition/12-proven-benefits-of-avocado (accessed 8.11.21).
+
+Health Benefits of Fish [WWW Document], n.d. URL
+     https://www.doh.wa.gov/communityandenvironment/food/fish/healthbenefits (accessed 8.11.21).
+
+Milk - Better Health Channel [WWW Document], n.d. URL 
+    https://www.betterhealth.vic.gov.au/health/healthyliving/milk (accessed 8.12.21).
+
+Nelson, A., n.d. Health Benefits of Carrots [WWW Document]. WebMD. URL 
+    https://www.webmd.com/food-recipes/benefits-carrots (accessed 8.13.21).
+
+Pork: Is It Good for You? [WWW Document], n.d. . WebMD. URL 
+    https://www.webmd.com/diet/pork-good-for-you (accessed 8.13.21).
+
+The health benefits of broccoli [WWW Document], n.d. . BBC Good Food. URL 
+    https://www.bbcgoodfood.com/howto/guide/health-benefits-broccoli (accessed 8.13.21).
+
+The health benefits of eggs [WWW Document], n.d. . BBC Good Food. URL 
+    https://www.bbcgoodfood.com/howto/guide/ingredient-focus-eggs (accessed 8.11.21).
+
+Top 15 Foods Highest in Vitamins [WWW Document], n.d. . myfooddata. URL
+     https://www.myfooddata.com/articles/high-vitamin-foods.php (accessed 8.14.21).
+        </pre>
+    </body>
+</html>

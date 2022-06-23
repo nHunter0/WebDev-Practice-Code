@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="question3.xsl"?>
+
+<audit campus="Woolloomooloo" year="2000" session="A">
+
+    <subject sid="0769642">
+        <code>MATH101</code>
+        <title>Calculus</title>
+        <statistics>
+            <enrol>170</enrol>
+            <withdrawn>31</withdrawn>
+        </statistics>
+    </subject>
+
+    <subject sid="1734231">
+        <code>MATH234</code>
+        <title>Abstract Algebra</title>
+        <statistics>
+            <enrol>40</enrol>
+            <withdrawn>15</withdrawn>
+        </statistics>
+    </subject>
+
+    
+    <subject sid="7382197">
+        <code>MATH420</code>
+        <title>Alerbruh Number Therory</title>
+        <statistics>
+            <enrol>69</enrol>
+            <withdrawn>4</withdrawn>
+        </statistics>
+    </subject>
+
+    <subject sid="6942069">
+        <code>MATH6969</code>
+        <title>Complex Analysis</title>
+        <statistics>
+            <enrol>42</enrol>
+            <withdrawn>20</withdrawn>
+        </statistics>
+    </subject>
+
+    <subject sid="7382913">
+        <code>MATH215</code>
+        <title>Topology</title>
+        <statistics>
+            <enrol>69</enrol>
+            <withdrawn>69</withdrawn>
+        </statistics>
+    </subject>
+</audit>

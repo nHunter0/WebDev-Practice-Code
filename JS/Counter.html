@@ -1,0 +1,43 @@
+<html>
+    <head> 
+        <title>Counter</title>
+        <script>
+            var counter = 0;
+            
+            function addTen() {
+                counter = counter + 10;
+                var counterSpan = document.getElementById("counter");
+                counterSpan.innerHTML = counter;
+            }
+
+            function minusFive() {
+                counter = counter - 5;
+                var counterSpan = document.getElementById("counter");
+                counterSpan.innerHTML = counter;
+            }
+
+            function resetNumber() {
+                counter = 0;
+                var counterSpan = document.getElementById("counter");
+                counterSpan.innerHTML = counter;
+            }
+        </script>
+    </head>
+    <body>
+        <button onClick="addTen();">
+            Add 10
+        </button>
+        <button onClick="minusFive();">
+            Minus 5
+        </button>
+
+        <button onClick="resetNumber();">
+            Reset Number
+        </button>
+
+        <br /><br />
+        <span id="counter" style="font-size:100px; color: orange;">
+            0
+        </span>
+    </body>
+</html>

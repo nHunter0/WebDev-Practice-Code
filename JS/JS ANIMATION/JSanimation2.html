@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>JavaScrip Exercise 2</title>
+    <script>
+        var counter = 0;
+        var number = 0;
+        var animationOn = false;
+        var numberAnimation;
+
+        function updateNumber() {
+            var resultSpan = document.getElementById("resultHolder");
+            var spanInputValue = document.getElementById("inputHolder");
+            var inputValue = (spanInputValue.value);
+
+            counter = counter + 1
+            result = inputValue * (counter);
+
+            resultSpan.innerHTML = counter + " x " + inputValue + " = " + result;
+        }
+
+        function startNumberAnimation() {
+
+            if (animationOn == false) {
+                animationOn = true;
+                numberAnimation = setInterval(updateNumber, 1000);
+            }
+        }
+
+        function stopNumberAnimation() {
+            if (animationOn == true) {
+                animationOn = false;
+                clearInterval(numberAnimation);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div style="font-size:20">Enter an integer into the text field</div>
+    <br />
+    <input type="text" size="5" id='inputHolder' />
+
+    <button onClick='startNumberAnimation();'>
+        Start Animation
+    </button>
+    <button onClick="stopNumberAnimation();">
+        Stop Animation
+    </button>
+    <br /><br />
+    <span id="resultHolder" style="font-size:30"> </span>
+</body>
+
+</html>

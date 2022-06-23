@@ -1,0 +1,87 @@
+<html>
+    <title>
+        WebForm-Exercise
+    </title>
+    <script>
+
+    </script>
+    <body>  
+        <form action="http://holiday.whosville.com/query" method="get">
+            <table border="0">
+                <tr>
+                    <td>
+                        Number of adults: 
+                    </td>
+                    <td>
+                        <input type="text" size="30" name="a" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of children:
+                    </td>
+                    <td>
+                        <input type="text" size="30" name="c" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number of days you want to stay: 
+                    </td>
+                    <td>
+                        <input type="text" size="30" name="d" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Accomodation type:
+                    </td>
+                    <td valign="top">
+                        <select name="accom">
+                            <option value="1" >Cabin</option>
+                            <option value="2" >Dormitory</option>
+                            <option value="3" >Cottage</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Cave tours you want to include:
+                    </td>
+                    <td>
+                        <input type ="checkbox" name="t" value="K" /> Ktar Koon Cave tour
+                        <br/>
+                        <input type ="checkbox" name="t" value="B" /> Beyoh Boon Cave tour
+                        <br/>
+                        <input type ="checkbox" name="t" value="S" /> Sontain Soon Cave tour
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Would you like to include internet service?
+                    </td>
+                    <td>
+                        <input type="radio" name="internet" value="y"/>Include internet service
+                        <input type="radio" name="internet" value="n"/> No internet
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <td>
+                        Fell free to ask any questions about holiday reserve:
+                    </td>
+                    <td>
+                        <textarea name="question" rows="5" cols="30"> please type your answer here </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value ="Submit" />
+                        <input type="reset" value="Reset" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

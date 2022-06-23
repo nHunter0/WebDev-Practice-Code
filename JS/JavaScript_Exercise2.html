@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>JS-Exercise</title>
+        <script>
+            function alertDisplay() {
+                alert("Hi there! JavaScript is cool!");
+            }
+
+            function doLion() {
+                var messageTextFeild = document.getElementById("messageBox");
+                messageTextFeild.value = "The Lion button is click";
+            }
+
+            function doFrog() {
+                var messageTextFeild = document.getElementById("messageBox");
+                messageTextFeild.value = "The Frog button is click";
+            }
+
+            function displayLion() {
+                var imgElement = document.getElementById("animalImage");
+                imgElement.src = "../images/lionImage.png";
+            }
+
+            function displayFrog() {
+                var imgElement = document.getElementById("animalImage");
+                imgElement.src = "../images/frogImage.jpg";
+            }
+
+            function rabbit() {
+                var messageSpan = document.getElementById("messageHolder");
+                messageSpan.innerHTML = "<span style = 'color: green; font-size:70px'>Rabbit</span>";
+            }
+
+            function roar() {
+                var messageSpan = document.getElementById("messageHolder");
+                messageSpan.innerHTML = "<span style='color : orange; font-size:70px'>Roar</span>";
+            }
+
+            var lionClick = 0;
+            function countLion() {
+                lionClick += +1;
+                var counterSpan = document.getElementById("counterLion");
+                counterSpan.innerHTML = lionClick;
+            }
+
+            var frogClick = 0;
+            function countFrog() {
+                frogClick += +1;
+                var counterSpan = document.getElementById("counterFrog");
+                counterSpan.innerHTML = frogClick;
+            }
+
+            var FROG_FACE = "&#x1F438;";
+            var frogFaceCounter = " ";
+
+            function addFrogFace() {
+                frogFaceCounter += FROG_FACE;
+                var frogSpan = document.getElementById("frogFace");
+                frogSpan.innerHTML = frogFaceCounter;
+            }
+
+        </script>
+    </head>
+    <body>
+        <!-- QUESTION 1 -->
+        <h1> <b>QUESTION 1</b></h1>
+        <button onClick="console.log('Hi there');"> Console Hi </button>
+        <br /><br />
+        <button onClick="alertDisplay()"> Alert Hi </button> 
+        <br /><br />
+
+        <!-- QUESTION 2 -->
+        <h1> <b>QUESTION 2</b></h1>
+        <!-- Lion Button -->
+        <button onClick="doLion();">
+            Lion
+        </button>
+        <!-- Frog Button -->
+        <button onClick="doFrog()">
+            Frog
+        </button>
+        <br /><br />
+        <!-- Text Box -->
+        <input type ="text" size="50" id="messageBox" />
+        <br /><br />
+
+        <!-- QUESTION 3 -->
+        <h1> <b>QUESTION 3</b></h1>
+        <button onClick="displayLion()">LionImage</button>
+        <button onClick="displayFrog()">FrogImage</button>
+        <br/><br/>
+        <!-- Image of Lion -->
+        <img id="animalImage"  height="350px"/>
+        <!-- Image of Frog -->
+        <img id="animalImage"  height="350px" />
+        <br /><br />
+
+        <!-- QUESTION 4 -->
+        <h1><b>QUESTION 4</b></h1>
+        <h2>Click on lion or frog to display sound of animal</h2>
+        <img src="../images/lionImage2.jpg" alt="image of lion" height="150px" onClick="roar();"/>
+        <img src="../images/frogImage2.webp" alt="image of frog" height="150px" onClick="rabbit();"/>
+        <br /><br />
+        <span id="messageHolder"> </span>
+
+        <br /><br />
+        <br /><br />
+
+        <!-- QUESTION 5 -->
+        <h1><b>QUESTION 5</b></h1>
+        <h2>Click on lion or frog to display number of times clicked</h2>
+        <img src="../images/lionImage3.jpg" alt="image of lion" height="150px" onClick="countLion();"/>
+        <img src="../images/frogImage3.jpg" alt="image of frog" height="150px" onClick="countFrog();"/>
+        <br />
+        Number of lion clicks: <span id="counterLion"> 0 </span>
+        Number of frog clicks: <span id="counterFrog"> 0 </span>
+        <br /><br />
+
+        <!-- QUESTION 6  -->
+        <h1><b>QUESTION 6</b></h1>
+        <h2>Click on frog to display a frog emoji</h2>
+        <img src="../images/frogImage4.jpg" alt="image of frog" height="150px" onClick="addFrogFace();"/>
+        <br/><br/>
+        <span id="frogFace">&#x1F438;</span>
+    </body>
+</html>

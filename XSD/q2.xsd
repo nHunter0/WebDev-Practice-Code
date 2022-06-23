@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="result">   
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="contestantId" type="xsd:string"/> 
+                <xsd:element name="examId" type="xsd:string"/>
+
+                <xsd:element name="score">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:integer">
+                            <xsd:minExclusive value="0" />
+                            <xsd:maxInclusive value="300"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+
+                <xsd:element name="band">   
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="A" />
+                            <xsd:enumeration value="B" />
+                            <xsd:enumeration value="C" />
+                            <xsd:enumeration value="D" />
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                
+                <xsd:element name="digitalSignature" type="xsd:string"/>
+            </xsd:sequence>
+            <xsd:attribute name="ref" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

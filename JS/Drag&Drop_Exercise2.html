@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Drag&Drop Exercise</title>
+    </head>
+    <style>
+        .animalText {
+            font-size: 80px;
+        }
+    </style>
+
+    <script>
+
+        function dragStart(event){
+            //get id
+            var dragId = event.target.id;
+            //console.log(dragId);
+
+            //store
+            event.dataTransfer.setData("dragId",dragId);
+
+        }
+
+        var dogCount = 0;
+        var catCount = 0;
+
+        function drop(event){
+            //get Drop ID
+            var dropId = event.target.id;
+            console.log("dropId=" + dropId);
+
+
+            //get Drag ID
+            var dragId = event.dataTransfer.getData("dragId");
+            console.log("dragId = " + dragId);
+
+            //Logic
+            if( (dropId == "dogText") && (dragId == "dogImage") ){
+                dogCount++;
+                var html = getImageHtml("dog.png",dogCount);
+                var dogHolderSpan = document.getElementById("dogHolder");
+                dogHolderSpan.innerHTML = html;
+            } 
+            else if ((dropId == "catText") && (dragId == "catImage")){
+                catCount++;
+                var html = getImageHtml("cat.jpeg",catCount);
+                var dogHolderSpan = document.getElementById("catHolder");
+                dogHolderSpan.innerHTML = html;
+            } 
+        }
+
+        function getImageHtml(imageSource, count){
+            var html = " ";
+
+            for(var i=0; i< count; i++){
+                html += "<img src= '" + imageSource + " ' height='100px' />";
+            }
+            return html;
+        }
+
+        function dragOver(event){
+            event.preventDefault();
+        }
+
+    </script>
+    <body>
+
+        Drag an animal and drop in corresponding text
+        <br /><br />
+
+        <div>
+            <span class="animalText"
+                id="dogText"
+                onDrop="drop(event)"
+                onDragOver="dragOver(event)" >
+                DOG
+            </span>
+
+            <span id="dogHolder">
+
+            </span>
+
+            <br/><br/>
+
+            <span class="animalText"
+                id="catText"
+                onDrop="drop(event)"
+                onDragOver="dragOver(event)" >
+                CAT
+            </span>
+
+            <span id="catHolder">
+
+            </span>
+        </div>
+
+        <br />
+        <img src="../images/catImage.jpg" height="100px"
+        id="catImage"
+        draggable="true"
+        onDragStart="dragStart(event)"/>
+
+        <img src="../images/dogImage.jpg" height="100px"
+        id="dogImage"
+        draggable="true"
+        onDragStart="dragStart(event)" />
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Random Emoji</title>
+    <script>
+        var randInt = 0;
+        var animationOn = false;
+
+        function displayRandomEmoji() {
+            randInt = Math.round(Math.random() * 4);
+            var emojiSpan = document.getElementById("emojiHolder");
+
+            if (randInt == 1) {
+                emojiSpan.innerHTML = "&#9889";
+            }
+
+            if (randInt == 2) {
+                emojiSpan.innerHTML = "&#10024";
+            }
+
+            if (randInt == 3) {
+                emojiSpan.innerHTML = "&#127789";
+            }
+
+            if (randInt == 4) {
+                emojiSpan.innerHTML = "&#127877";
+            }
+        }
+
+        function startAnimation() {
+            if (animationOn == false) {
+                animationOn = true;
+                numberAnimation = setInterval(displayRandomEmoji, 2000);
+            }
+        }
+
+        function stopAnimation() {
+            if (animationOn == true) {
+                animationOn = false;
+                clearInterval(numberAnimation);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <button style="font-size: 25;" onClick=startAnimation()> Display Random Emoji</button>
+    <button style="font-size: 25;" onClick=stopAnimation()>Stop</button>
+    <br />
+    <span id="emojiHolder" style="font-size: 50;"></span>
+</body>
+
+</html>

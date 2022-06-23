@@ -1,0 +1,32 @@
+{
+    "firstName": "Jhon",
+    "lastNamr" : "Smith",
+    "studentId": "1231234",
+    "subjectResultList" : 
+    [
+        {
+            "code": "Math101",
+            "cp" : 4,
+            "mark" : 85,
+            "grade": "A"
+        },
+        {
+            "code": "ECON111",
+            "cp" : 4,
+            "mark" : 70,
+            "grade": "B" 
+        },
+        {
+            "code": "CS100",
+            "cp" : 5,
+            "mark" : 80,
+            "grade": "A"
+        },
+        {
+            "code": "LAW121",
+            "cp" : 6,
+            "mark" : 75,
+            "grade": "B"
+        }
+    ]
+}
